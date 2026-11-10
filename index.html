@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu Portfólio</title>
+  <style>
+    :root {
+      --bg: #09090b;
+      --card-bg: #141417;
+      --card-border: #27272a;
+      --card-hover: #1f1f23;
+      --accent: #EA1D2C; /* Destaque sutil */
+      --text: #f4f4f5;
+      --muted: #a1a1aa;
+      --tag-bg: #27272a;
+      --tag-text: #e4e4e7;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      padding: 48px 20px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 680px;
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    header {
+      text-align: center;
+    }
+
+    .badge {
+      display: inline-block;
+      background: rgba(234, 29, 44, 0.1);
+      color: var(--accent);
+      border: 1px solid rgba(234, 29, 44, 0.25);
+      padding: 4px 12px;
+      border-radius: 9999px;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      font-size: 28px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 8px;
+    }
+
+    p.subtitle {
+      color: var(--muted);
+      font-size: 15px;
+      max-width: 540px;
+      margin: 0 auto;
+    }
+
+    /* Lista de Projetos */
+    .projects-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .project-card {
+      background-color: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 20px;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      transition: all 0.2s ease;
+      position: relative;
+    }
+
+    .project-card:hover {
+      border-color: #3f3f46;
+      background-color: var(--card-hover);
+      transform: translateY(-2px);
+    }
+
+    .card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .card-top h2 {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .external-icon {
+      color: var(--muted);
+      font-size: 14px;
+      flex-shrink: 0;
+    }
+
+    .project-desc {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .tags {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 4px;
+    }
+
+    .tag {
+      font-size: 11px;
+      background: var(--tag-bg);
+      color: var(--tag-text);
+      padding: 3px 8px;
+      border-radius: 6px;
+      font-weight: 500;
+    }
+
+    .tag-platform {
+      background: #18181b;
+      border: 1px solid #3f3f46;
+      color: var(--muted);
+    }
+
+    /* Rodapé */
+    footer {
+      text-align: center;
+      margin-top: 16px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    footer a {
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <main class="container">
+    <header>
+      <span class="badge">Portfólio Técnico</span>
+      <h1>Projetos e Aplicações em Produção</h1>
+      <p class="subtitle">Soluções funcionais desenvolvidas para otimização de rotinas, gestão, segurança digital e informações culinárias.</p>
+    </header>
+
+    <section class="projects-grid">
+      <a href="https://camaraonamesa.com.br/" target="_blank" rel="noopener noreferrer" class="project-card">
+        <div class="card-top">
+          <h2>Camarão na Mesa </h2>
+          <span class="external-icon">↗</span>
+        </div>
+        <p class="project-desc">Site de culinária em produção voltada a publicação de conteúdo otimizado para SEO, arquitetura leve e experiência de usuário fluida.</p>
+      </a>
+
+      <a href="https://reminder-five-ochre.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-card">
+        <div class="card-top">
+          <h2>Meu Calendário | Gestor de Atividades</h2>
+          <span class="external-icon">↗</span>
+        </div>
+        <p class="project-desc">Aplicação voltada para planejamento e acompanhamento de tarefas, com projeção automática de recorrências e persistência local via LocalStorage.</p>
+      </a>
+
+      <a href="https://gerador-de-senha-silk.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-card">
+        <div class="card-top">
+          <h2>Gerador de Senhas</h2>
+          <span class="external-icon">↗</span>
+        </div>
+        <p class="project-desc">Interface desenvolvida para criação de senhas com até 25 caracteres, com foco em segurança e diversificação de maior segurança no login</p>
+      </a>
+
+    </section>
+
+    <footer>
+      <p>Desenvolvido para apresentação técnica, segue em anexo o link com os demais projetos no GitHub · <a href="https://github.com/natanael0397" target="_blank">GitHub</a></p>
+    </footer>
+  </main>
+
+</body>
+</html>
